@@ -1,3 +1,13 @@
+"""
+This is the module to perform operations needed to measure heart rate from the TROIKA dataset.
+
+Steps to run the algorithm:
+
+1. Run the script `prepare_regressor.py`. This script will produce a regression model in the form of a [Pickle](https://docs.python.org/3/library/pickle.html) object that we can load and use to perform predictions on new data.
+2. Run the code cell below to check the performance of the algorithm on the training data.
+3. Testing data are available in the directory `datasets/troika/testing_data` if you'd like to see the performance of the model on new data.
+"""
+
 import numpy as np
 from sklearn.model_selection import LeaveOneGroupOut
 from sklearn.metrics import mean_squared_error
