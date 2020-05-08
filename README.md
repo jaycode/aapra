@@ -50,7 +50,7 @@ In building the linear regression model, we use Leave One Group Out (LOGO) cross
 
 The error of the model in the testing data is  7.01 BPM. While this is low enough to pass the specification, this is still inferior to the simple algorithm that just selects the frequency that corresponds to the highest magnitude from the mean of both PPG signals. This simple algorithm got only 0.60 BPM in the test data. However, the score is very slightly better for the model-based algorithm in the training data (13.254 BPM for the model-based vs 13.365 BPM for the simple algo).
 
-As we only have 12 subjects, the algorithm may not be as generalizable as we'd like when used for a large population. To improve its generalizability, more test subjects are needed.
+As we only have 12 subjects, the algorithm may not be as generalizable as we'd like when used for a large population. To improve its generalizability, more test subjects are needed. Additionally, there is also a limited variability in terms of activities and environments, which would render this model less usable to cycling data or to other labs or outside environments.
 
 
 ### References

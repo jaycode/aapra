@@ -230,8 +230,8 @@ def load_regressor(pickle_path):
     Args:
         pickle_path: (string) Path to the pickle file
     """
-    file = open(pickle_path, 'rb')
-    return pickle.load(file)
+    with open(pickle_path, 'rb') as file:
+        return pickle.load(file)
 
 
 def LoadTroikaDataset(path):
