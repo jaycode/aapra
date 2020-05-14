@@ -49,13 +49,12 @@ def load_data(path, fs=125, window_len_s=8,
             ref = refs[i]
 
             # Extract features
-            ppg1 = sigs[1, start_idx: end_idx]
-            ppg2 = sigs[2, start_idx: end_idx]
+            ppg = sigs[0, start_idx: end_idx]
             accx = sigs[3, start_idx:end_idx]
             accy = sigs[4, start_idx:end_idx]
             accz = sigs[5, start_idx:end_idx]
 
-            feature = troika.featurize(ppg1, ppg2, accx, accy, accz,
+            feature = troika.featurize(ppg, accx, accy, accz,
                                        fs, pass_band, multiplier)
             
             targets.append(ref)
